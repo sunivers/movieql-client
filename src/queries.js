@@ -11,3 +11,15 @@ export const HOME_PAGE = gql`
   } 
 }
 `
+export const DETAIL_PAGE = gql`
+{
+  movie(id: 15051) {
+    id
+    title
+    genres
+    rating
+    medium_cover_image
+    description_intro
+  }
+}
+`
