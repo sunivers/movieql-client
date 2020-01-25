@@ -12,14 +12,19 @@ export const HOME_PAGE = gql`
 }
 `
 export const DETAIL_PAGE = gql`
-{
-  movie(id: 15051) {
-    id
+query getMovieDetails($movieId: Int!) {
+  movie(id: $movieId) {
     title
     genres
+    language
     rating
     medium_cover_image
     description_intro
+  }
+  suggestions(id: $movieId) {
+    medium_cover_image
+    title
+    rating
   }
 }
 `
