@@ -22,6 +22,7 @@ query getMovieDetails($movieId: Int!) {
     description_intro
   }
   suggestions(id: $movieId) {
+    id
     medium_cover_image
     title
     rating
